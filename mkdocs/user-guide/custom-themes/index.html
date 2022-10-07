@@ -1,0 +1,2093 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://blog.yyang.in/mkdocs/user-guide/custom-themes/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>自定义主题 - Yang's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yang&#39;s Blog" class="md-header__button md-logo" aria-label="Yang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yang's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              自定义主题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yangyang1989/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Yang's GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../article/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="md-tabs__link">
+        文章
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../writing-your-docs/" class="md-tabs__link md-tabs__link--active">
+        MkDocs中文文档
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yang&#39;s Blog" class="md-nav__button md-logo" aria-label="Yang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yang's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yangyang1989/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Yang's GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          文章
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文章" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          文章
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../article/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="md-nav__link">
+        第一篇文章
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../article/%E6%B5%8B%E8%AF%95%E9%93%BE%E6%8E%A5%E8%A7%86%E9%A2%91/" class="md-nav__link">
+        测试typora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          MkDocs中文文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MkDocs中文文档" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          MkDocs中文文档
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          用户指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="用户指南" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          用户指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-your-docs/" class="md-nav__link">
+        编写文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styling-your-docs/" class="md-nav__link">
+        设置文档样式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        配置文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying-your-docs/" class="md-nav__link">
+        部署文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          自定义主题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        自定义主题
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    创建自定义主题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本主题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    模板变量
+  </a>
+  
+    <nav class="md-nav" aria-label="模板变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    全局上下文
+  </a>
+  
+    <nav class="md-nav" aria-label="全局上下文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    nav
+  </a>
+  
+    <nav class="md-nav" aria-label="nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navhomepage" class="md-nav__link">
+    nav.homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navpages" class="md-nav__link">
+    nav.pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav_1" class="md-nav__link">
+    Nav变量示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base_url" class="md-nav__link">
+    base_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs_version" class="md-nav__link">
+    mkdocs_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_date_utc" class="md-nav__link">
+    build_date_utc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    page
+  </a>
+  
+    <nav class="md-nav" aria-label="page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagetitle" class="md-nav__link">
+    page.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagecontent" class="md-nav__link">
+    page.content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagetoc" class="md-nav__link">
+    page.toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagemeta" class="md-nav__link">
+    page.meta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageurl" class="md-nav__link">
+    page.url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageabs_url" class="md-nav__link">
+    page.abs_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagecanonical_url" class="md-nav__link">
+    page.canonical_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageedit_url" class="md-nav__link">
+    page.edit_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_homepage" class="md-nav__link">
+    page.is_homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageprevious_page" class="md-nav__link">
+    page.previous_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagenext_page" class="md-nav__link">
+    page.next_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageparent" class="md-nav__link">
+    page.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagechildren" class="md-nav__link">
+    page.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageactive" class="md-nav__link">
+    page.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_section" class="md-nav__link">
+    page.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_page" class="md-nav__link">
+    page.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_link" class="md-nav__link">
+    page.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    导航对象
+  </a>
+  
+    <nav class="md-nav" aria-label="导航对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section" class="md-nav__link">
+    Section
+  </a>
+  
+    <nav class="md-nav" aria-label="Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sectiontitle" class="md-nav__link">
+    section.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionparent" class="md-nav__link">
+    section.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionchildren" class="md-nav__link">
+    section.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionactive" class="md-nav__link">
+    section.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_section" class="md-nav__link">
+    section.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_page" class="md-nav__link">
+    section.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_link" class="md-nav__link">
+    section.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+    <nav class="md-nav" aria-label="Link">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linktitle" class="md-nav__link">
+    link.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkurl" class="md-nav__link">
+    link.url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkparent" class="md-nav__link">
+    link.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkchildren" class="md-nav__link">
+    link.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkactive" class="md-nav__link">
+    link.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_section" class="md-nav__link">
+    link.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_page" class="md-nav__link">
+    link.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_link" class="md-nav__link">
+    link.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    额外的上下文
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    模板过滤器
+  </a>
+  
+    <nav class="md-nav" aria-label="模板过滤器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tojson" class="md-nav__link">
+    tojson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    主题中的搜索
+  </a>
+  
+    <nav class="md-nav" aria-label="主题中的搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include_search_page" class="md-nav__link">
+    include_search_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_index_only" class="md-nav__link">
+    search_index_only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    打包主题
+  </a>
+  
+    <nav class="md-nav" aria-label="打包主题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    包布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    主题配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    分发主题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        插件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          关于MkDocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="关于MkDocs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          关于MkDocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    创建自定义主题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本主题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    模板变量
+  </a>
+  
+    <nav class="md-nav" aria-label="模板变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    全局上下文
+  </a>
+  
+    <nav class="md-nav" aria-label="全局上下文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    nav
+  </a>
+  
+    <nav class="md-nav" aria-label="nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navhomepage" class="md-nav__link">
+    nav.homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navpages" class="md-nav__link">
+    nav.pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav_1" class="md-nav__link">
+    Nav变量示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base_url" class="md-nav__link">
+    base_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs_version" class="md-nav__link">
+    mkdocs_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_date_utc" class="md-nav__link">
+    build_date_utc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    page
+  </a>
+  
+    <nav class="md-nav" aria-label="page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagetitle" class="md-nav__link">
+    page.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagecontent" class="md-nav__link">
+    page.content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagetoc" class="md-nav__link">
+    page.toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagemeta" class="md-nav__link">
+    page.meta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageurl" class="md-nav__link">
+    page.url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageabs_url" class="md-nav__link">
+    page.abs_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagecanonical_url" class="md-nav__link">
+    page.canonical_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageedit_url" class="md-nav__link">
+    page.edit_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_homepage" class="md-nav__link">
+    page.is_homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageprevious_page" class="md-nav__link">
+    page.previous_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagenext_page" class="md-nav__link">
+    page.next_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageparent" class="md-nav__link">
+    page.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagechildren" class="md-nav__link">
+    page.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageactive" class="md-nav__link">
+    page.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_section" class="md-nav__link">
+    page.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_page" class="md-nav__link">
+    page.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pageis_link" class="md-nav__link">
+    page.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    导航对象
+  </a>
+  
+    <nav class="md-nav" aria-label="导航对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section" class="md-nav__link">
+    Section
+  </a>
+  
+    <nav class="md-nav" aria-label="Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sectiontitle" class="md-nav__link">
+    section.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionparent" class="md-nav__link">
+    section.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionchildren" class="md-nav__link">
+    section.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionactive" class="md-nav__link">
+    section.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_section" class="md-nav__link">
+    section.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_page" class="md-nav__link">
+    section.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sectionis_link" class="md-nav__link">
+    section.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+    <nav class="md-nav" aria-label="Link">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linktitle" class="md-nav__link">
+    link.title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkurl" class="md-nav__link">
+    link.url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkparent" class="md-nav__link">
+    link.parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkchildren" class="md-nav__link">
+    link.children
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkactive" class="md-nav__link">
+    link.active
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_section" class="md-nav__link">
+    link.is_section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_page" class="md-nav__link">
+    link.is_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkis_link" class="md-nav__link">
+    link.is_link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    额外的上下文
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    模板过滤器
+  </a>
+  
+    <nav class="md-nav" aria-label="模板过滤器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tojson" class="md-nav__link">
+    tojson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    主题中的搜索
+  </a>
+  
+    <nav class="md-nav" aria-label="主题中的搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include_search_page" class="md-nav__link">
+    include_search_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_index_only" class="md-nav__link">
+    search_index_only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    打包主题
+  </a>
+  
+    <nav class="md-nav" aria-label="打包主题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    包布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    主题配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    分发主题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/yangyang1989/blog/edit/master/docs/mkdocs/user-guide/custom-themes.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="_1">自定义主题</h1>
+<p>创建和分发自定义主题的指南。</p>
+<hr />
+<p>!!! Note "注意："</p>
+<pre><code>如果你只是寻找第三方主题，请转到MkDocs在GitHub上的[wiki页面](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)。如果你想共享自己的创作的主题，也可以在该页面上提交。
+</code></pre>
+<p>创建新主题时，您可以按照本指南中的步骤从头开始创建一个，也可以下载<code>mkdocs-basic-theme</code>，在此基础开始创作。该主题是一个基本的，但是包含了一个主题所必须的所有文件。 <strong>您可以在<a href="https://github.com/mkdocs/mkdocs-basic-theme">GitHub</a></strong>上找到此基本主题。它包含代码中的详细注释，用于描述不同的功能及其用法。</p>
+<h2 id="_2">创建自定义主题</h2>
+<p>自定义主题至少包含一个<code>main.html</code><a href="http://jinja.pocoo.org/docs/dev/">Jinja2 template</a>文件，要求该文件存放于一个<em>不是</em><a href="../configuration/#docs_dir">docs_dir</a>子目录的目录中。 在<code>mkdocs.yml</code>中，将<a href="../configuration/#custom_dir">theme.custom_dir</a>选项设置为包含<code>main.html</code>的目录的路径。 路径应该相对于配置文件。 例如，给定此示例项目布局：</p>
+<pre><code class="language-no-highlight">mkdocs.yml
+docs/
+    index.md
+    about.md
+custom_theme/
+    main.html
+    ...
+</code></pre>
+<p>您将在<code>mkdocs.yml</code>中包含以下设置以使用自定义主题目录：</p>
+<pre><code class="language-yaml">theme:
+    name: null
+    custom_dir: 'custom_theme/'
+</code></pre>
+<p>!!! Note "注意："</p>
+<pre><code>通常，在构建自己的自定义主题时，[theme.name]配置设置将设置为`null`。 但是，如果theme.[custom_dir]配置值与现有主题结合使用，则theme.[custom_dir]可用于仅替换内置主题的特定部分。 例如，使用上面的布局，如果你设置`name："mkdocs"`那么主题中的`main.html`文件。[custom_dir]将替换`mkdocs`主题中的同名文件，否则 `mkdocs`主题将保持不变。如果要对现有主题进行小幅调整，这将非常有用。
+
+有关更具体的信息，请参阅[样式化您的文档]。
+</code></pre>
+<h2 id="_3">基本主题</h2>
+<p>最简单的<code>main.html</code>文件如下：</p>
+<pre><code class="language-django">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{ page.content }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>使用<code>{{page.content}}</code>标签指代每个页面的正文内容。 样式表和脚本可以像普通HTML文件一样进入此主题。 导航栏和目录也可以分别通过<code>nav</code>和<code>toc</code>对象自动生成和包含。 如果您希望编写自己的主题，建议您从[内置主题]之一开始，并相应地进行修改。</p>
+<p>!!! Note "注意："</p>
+<pre><code>由于MkDocs使用[Jinja]作为其模板引擎，因此您可以访问Jinja的所有功能，包括[模板继承]。您可能会注意到MkDocs中包含的主题广泛使用模板继承和块，允许用户轻松地从主题[custom_dir]覆盖模板的一小部分。 因此，内置主题在`base.html`文件中实现，`main.html`扩展。虽然不是必需的，但鼓励第三方模板作者遵循类似的模式，并且可能希望定义与内置主题中使用的相同[块]以保持一致性。
+</code></pre>
+<h2 id="_4">模板变量</h2>
+<p>主题中的每个模板都使用模板上下文构建。 这些是主题可用的变量。 上下文取决于正在构建的模板。目前，模板是使用全局上下文或特定于页面的上下文构建的。全局上下文用于不代表单个Markdown文档的HTML页面，例如404.html页面或search.html。</p>
+<h3 id="_5">全局上下文</h3>
+<p>以下变量可在任何模板上全局使用。</p>
+<h4 id="config">config</h4>
+<p><code>config</code>变量是从<code>mkdocs.yml</code>配置文件生成的MkDocs配置对象的实例。 虽然您可以使用任何配置选项，但一些常用选项包括：</p>
+<ul>
+<li><a href="../configuration/#site_name">config.site_name</a></li>
+<li><a href="../configuration/#site_url">config.site_url</a></li>
+<li><a href="../configuration/#site_author">config.site_author</a></li>
+<li><a href="../configuration/#site_description">config.site_description</a></li>
+<li><a href="../configuration/#extra_javascript">config.extra_javascript</a></li>
+<li><a href="../configuration/#extra_css">config.extra_css</a></li>
+<li><a href="../configuration/#repo_url">config.repo_url</a></li>
+<li><a href="../configuration/#repo_name">config.repo_name</a></li>
+<li><a href="../configuration/#copyright">config.copyright</a></li>
+<li><a href="../configuration/#google_analytics">config.google_analytics</a></li>
+</ul>
+<h4 id="nav">nav</h4>
+<p><code>nav</code>变量用于创建文档的导航。 <code>nav</code>对象是由<a href="../configuration/#nav">nav</a>配置设置定义的<a href="#navigation-objects">导航对象</a>的可迭代对象。</p>
+<p>除了<a href="#navigation-objects">navigation objects</a>的可迭代之外，<code>nav</code>对象还包含以下属性：</p>
+<h5 id="navhomepage">nav.homepage</h5>
+<p>网站主页的<a href="#page">页面</a>对象。</p>
+<h5 id="navpages">nav.pages</h5>
+<p>导航中包含的所有<a href="#page">页面</a>对象的平面列表。此列表不一定是所有网站页面的完整列表，因为它不包含导航中未包含的页面。此列表与用于所有“下一页”和“上一页”链接的页面列表和顺序相匹配。有关所有页面的列表，请使用<a href="#page">pages</a>模板变量。</p>
+<h5 id="nav_1">Nav变量示例</h5>
+<p>以下是将第一级和第二级导航输出为嵌套列表的基本用法示例。</p>
+<pre><code class="language-django">{% if nav|length&gt;1 %}
+    &lt;ul&gt;
+    {% for nav_item in nav %}
+        {% if nav_item.children %}
+            &lt;li&gt;{{ nav_item.title }}
+                &lt;ul&gt;
+                {% for nav_item in nav_item.children %}
+                    &lt;li class=&quot;{% if nav_item.active%}current{% endif %}&quot;&gt;
+                        &lt;a href=&quot;{{ nav_item.url|url }}&quot;&gt;{{ nav_item.title }}&lt;/a&gt;
+                    &lt;/li&gt;
+                {% endfor %}
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        {% else %}
+            &lt;li class=&quot;{% if nav_item.active%}current{% endif %}&quot;&gt;
+                &lt;a href=&quot;{{ nav_item.url|url }}&quot;&gt;{{ nav_item.title }}&lt;/a&gt;
+            &lt;/li&gt;
+        {% endif %}
+    {% endfor %}
+    &lt;/ul&gt;
+{% endif %}
+</code></pre>
+<h4 id="base_url">base_url</h4>
+<p><code>base_url</code>提供了MkDocs项目根目录的相对路径。虽然可以通过将其预先添加到本地相对URL来直接使用它，但最好使用<a href="#url">url</a>模板过滤器，它更灵活地应用<code>base_url</code>。</p>
+<h4 id="mkdocs_version">mkdocs_version</h4>
+<p>包含当前的MkDocs版本。</p>
+<h4 id="build_date_utc">build_date_utc</h4>
+<p>一个Python日期时间对象，表示以UTC格式构建文档的日期和时间。 这对于显示文档最近的更新非常有用。</p>
+<h4 id="pages">pages</h4>
+<p>包含项目中<em>所有</em>页面的<a href="#page">page</a>对象列表。该列表是一个平面列表，所有页面按字母顺序按目录和文件名排序。请注意，索引页面排在目录中的顶部。 此列表可以包含未包含在全局<a href="#nav">导航</a>中的页面，并且可能与该导航中的页面顺序不匹配。</p>
+<h4 id="page">page</h4>
+<p>在未从Markdown源文件呈现的模板中，<code>page</code>变量为<code>None</code>。 在从Markdown源文件呈现的模板中，<code>page</code>变量包含<code>page</code>对象。 相同的<code>page</code>对象在全局<a href="#nav">navigation</a>和<a href="#pages">pages</a>模板变量中用作<code>page</code> <a href="＃navigation-objects">导航对象</a>。</p>
+<p>所有<code>page</code>对象都包含以下属性：</p>
+<h5 id="pagetitle">page.title</h5>
+<p>包含当前页面的标题。</p>
+<h5 id="pagecontent">page.content</h5>
+<p>呈现Markdown为HTML，这是文档的内容。</p>
+<h5 id="pagetoc">page.toc</h5>
+<p>一个可迭代的对象，表示页面的目录。 <code>toc</code>中的每个项目都是<code>AnchorLink</code>，它包含以下属性：</p>
+<ul>
+<li><code>AnchorLink.title</code>: 该项目的文本。</li>
+<li><code>AnchorLink.url</code>: 指向该项的URL中的以#开头的片段。</li>
+<li><code>AnchorLink.level</code>: 项目的从零开始的级别。</li>
+<li><code>AnchorLink.children</code>: 任何子项的可迭代。</li>
+</ul>
+<p>以下示例将显示页面的目录的前两个级别。</p>
+<pre><code class="language-django">&lt;ul&gt;
+{% for toc_item in page.toc %}
+    &lt;li&gt;&lt;a href=&quot;{{ toc_item.url }}&quot;&gt;{{ toc_item.title }}&lt;/a&gt;&lt;/li&gt;
+    {% for toc_item in toc_item.children %}
+        &lt;li&gt;&lt;a href=&quot;{{ toc_item.url }}&quot;&gt;{{ toc_item.title }}&lt;/a&gt;&lt;/li&gt;
+    {% endfor %}
+{% endfor %}
+&lt;/ul&gt;
+</code></pre>
+<h5 id="pagemeta">page.meta</h5>
+<p>包含在markdown页面顶部的元数据的映射。 在这个例子中，我们在页面标题上面定义了一个<code>source</code>属性。</p>
+<pre><code class="language-no-highlight">source: generics.py
+        mixins.py
+
+# Page title
+
+Content...
+</code></pre>
+<p>模板可以使用<code>meta.source</code>变量访问页面的元数据。 然后，可以使用它链接到与文档页面相关的源文件。</p>
+<pre><code class="language-django">{% for filename in page.meta.source %}
+  &lt;a class=&quot;github&quot; href=&quot;https://github.com/.../{{ filename }}&quot;&gt;
+    &lt;span class=&quot;label label-info&quot;&gt;{{ filename }}&lt;/span&gt;
+  &lt;/a&gt;
+{% endfor %}
+</code></pre>
+<h5 id="pageurl">page.url</h5>
+<p>页面的URL相对于MkDocs<code>site_dir</code>。 预计这将与<a href="#url">url</a>过滤器一起使用，以确保URL相对于当前页面。</p>
+<pre><code class="language-django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
+</code></pre>
+<h5 id="pageabs_url">page.abs_url</h5>
+<p>来自服务器根目录的页面的绝对URL，由分配给<a href="../configuration/#site_url">site_url</a>配置设置的值确定。 该值包括<code>site_url</code>中包含的任何子目录，但不包括域。 <a href="#base_url">base_url</a>不应与此变量一起使用。</p>
+<p>例如，如果<code>site_url：https：//example.com/</code>，那么页面<code>foo.md</code>的<code>page.abs_url</code>的值将是<code>/foo/</code>。但是，如果<code>site_url：https：//example.com/bar/</code>，那么页面<code>foo.md</code>的<code>page.abs_url</code>的值将是<code>/bar/foo/</code>。</p>
+<h5 id="pagecanonical_url">page.canonical_url</h5>
+<p>通过分配给<a href="../configuration/#site_url">site_url</a>配置设置的值确定的当前页面的完整，规范URL。 该值包括域和“site_url”中包含的任何子目录。 <a href="#base_url">base_url</a>不应与此变量一起使用。</p>
+<h5 id="pageedit_url">page.edit_url</h5>
+<p>源存储库中源页面的完整URL。 通常用于提供编辑源页面的链接。 <a href="#base_url">base_url</a>不应与此变量一起使用。</p>
+<h5 id="pageis_homepage">page.is_homepage</h5>
+<p>对网站的主页评估为<code>True</code>，对所有其他页面评估为<code>False</code>。 这可以与<code>page</code>对象的其他属性一起使用来改变行为。 例如，要在主页上显示不同的标题：</p>
+<pre><code class="language-django">{% if not page.is_homepage %}{{ page.title }} - {% endif %}{{ site_name }}
+</code></pre>
+<h5 id="pageprevious_page">page.previous_page</h5>
+<p>上一页的页面对象或“无”。如果当前页面是站点导航中的第一项，或者当前页面根本不包含在导航中，则该值将为“无”。 当值是页面对象时，用法与“page”的用法相同。</p>
+<h5 id="pagenext_page">page.next_page</h5>
+<p>下一页的页面对象或“无”。如果当前页面是站点导航中的最后一项，或者当前页面根本不包含在导航中，则该值将为“无”。 当值是页面对象时，用法与“page”的用法相同。</p>
+<h5 id="pageparent">page.parent</h5>
+<p><a href="#nav">网站导航</a>中页面的直接父级。 如果页面位于顶层，则为<code>None</code>。</p>
+<h5 id="pagechildren">page.children</h5>
+<p>页面不包含子项，属性始终为<code>None</code>。</p>
+<h5 id="pageactive">page.active</h5>
+<p>当<code>True</code>时，表示该页面是当前查看的页面。 默认为<code>False</code>。</p>
+<h5 id="pageis_section">page.is_section</h5>
+<p>表示导航对象是“section”对象。 页面对象始终为<code>False</code>。</p>
+<h5 id="pageis_page">page.is_page</h5>
+<p>表示导航对象是“页面”对象。 页面对象始终为<code>True</code>。</p>
+<h5 id="pageis_link">page.is_link</h5>
+<p>表示导航对象是“链接”对象。 页面对象始终为<code>False</code>。</p>
+<h3 id="_6">导航对象</h3>
+<p><a href="#nav">nav</a>模板变量中包含的导航对象可以是<a href="#section">section</a>对象，<a href="#page">page</a>对象和<a href="#link">link</a>对象之一。 虽然节点对象可能包含嵌套的导航对象，但页面和链接却不包含。</p>
+<p>页面对象是用于当前[页面]（＃页面）的完整页面对象，具有所有可用的相同属性。Section和Link对象包含以下定义的那些属性的子集：</p>
+<h4 id="section">Section</h4>
+<p><code>section</code>导航对象在导航中定义命名部分，并包含子导航对象的列表。请注意，这些部分不包含URL，也不是任何类型的链接。但是，默认情况下，如果主题选择这样做，MkDocs会将索引页面排序到顶部，并且第一个子节点可能会用作节点的URL。</p>
+<p><code>section</code>对象提供以下属性：</p>
+<h5 id="sectiontitle">section.title</h5>
+<p>节点的标题。</p>
+<h5 id="sectionparent">section.parent</h5>
+<p>如果该节点位于顶层，则该节点的直接父级或<code>None</code>。</p>
+<h5 id="sectionchildren">section.children</h5>
+<p>所有子导航对象的可迭代。 子级可能包括嵌套的部分，页面和链接。</p>
+<h5 id="sectionactive">section.active</h5>
+<p>当<code>True</code>时，表示此节点的子页面是当前页面，可用于将该部分突出显示为当前查看的节点。 默认为<code>False</code>。</p>
+<h5 id="sectionis_section">section.is_section</h5>
+<p>表示导航对象是"节点"对象。 节点对象始终为<code>True</code>。</p>
+<h5 id="sectionis_page">section.is_page</h5>
+<p>表示导航对象是“页面”对象。 对于节点对象，始终为<code>False</code>。</p>
+<h5 id="sectionis_link">section.is_link</h5>
+<p>表示导航对象是“链接”对象。 对于节点对象，始终为<code>False</code>。</p>
+<h4 id="link">Link</h4>
+<p><code>link</code>导航对象包含一个不指向内部MkDocs页面的链接。 <code>link</code>对象提供以下属性：</p>
+<h5 id="linktitle">link.title</h5>
+<p>链接的标题。 这通常用作链接的标签。</p>
+<h5 id="linkurl">link.url</h5>
+<p>链接指向的URL。 URL应该始终是绝对URL，并且不需要预先设置<code>base_url</code>。</p>
+<h5 id="linkparent">link.parent</h5>
+<p>链接的直接父级。 如果链接位于顶层，则为<code>None</code>。</p>
+<h5 id="linkchildren">link.children</h5>
+<p>链接不包含子项，属性始终为<code>None</code>。</p>
+<h5 id="linkactive">link.active</h5>
+<p>外部链接不能“活动”，属性始终为<code>False</code>。</p>
+<h5 id="linkis_section">link.is_section</h5>
+<p>表示导航对象是“section”对象。 链接对象始终为<code>False</code>。</p>
+<h5 id="linkis_page">link.is_page</h5>
+<p>表示导航对象是“页面”对象。 链接对象始终为<code>False</code>。</p>
+<h5 id="linkis_link">link.is_link</h5>
+<p>表示导航对象是“链接”对象。 链接对象始终为<code>True</code>。</p>
+<h3 id="_7">额外的上下文</h3>
+<p>可以使用<a href="/user-guide/configuration.md＃extra"><code>extra</code></a>配置选项将其他变量传递给模板。 这是一组键值对，可以使自定义模板更加灵活。</p>
+<p>例如，这可以用于包括所有页面的项目版本以及与项目相关的链接列表。 这可以通过以下<code>extra</code>配置来实现：</p>
+<pre><code class="language-yaml">extra:
+    version: 0.13.0
+    links:
+        - https://github.com/mkdocs
+        - https://docs.readthedocs.org/en/latest/builds.html#mkdocs
+        - https://www.mkdocs.org/
+</code></pre>
+<p>然后在自定义主题中显示此HTML。</p>
+<pre><code class="language-django">{{ config.extra.version }}
+
+{% if config.extra.links %}
+  &lt;ul&gt;
+  {% for link in config.extra.links %}
+      &lt;li&gt;{{ link }}&lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endif %}
+</code></pre>
+<h2 id="_8">模板过滤器</h2>
+<p>除了Jinja的默认过滤器之外，还可以在MkDocs模板中使用以下自定义过滤器：</p>
+<h3 id="url">url</h3>
+<p>规范化URL。 绝对URL通过不变的方式传递。如果URL是相对的并且模板上下文包括页面对象，则相对于页面对象返回URL。否则，返回的URL前缀为<a href="#base_url">base_url</a>。</p>
+<pre><code class="language-django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
+</code></pre>
+<h3 id="tojson">tojson</h3>
+<p>Safety convert a Python object to a value in a JavaScript script.
+用于JavaScript中，安全地转换python对象的值。</p>
+<pre><code class="language-django">&lt;script&gt;
+    var mkdocs_page_name = {{ page.title|tojson|safe }};
+&lt;/script&gt;
+</code></pre>
+<h2 id="_9">主题中的搜索</h2>
+<p>截至MkDocs版本<em> 0.17 </em>客户端搜索支持已通过<code>search</code>插件添加到MkDocs。主题需要为插件提供一些与主题一起使用的东西。</p>
+<p>虽然默认情况下会激活<code>search</code>插件，但用户可以禁用该插件，主题应该考虑到这一点。建议主题模板使用对插件的检查来包装搜索特定标记：</p>
+<pre><code class="language-django">{% if 'search' in config['plugins'] %}
+    search stuff here...
+{% endif %}
+</code></pre>
+<p>在其最基本的功能上，搜索插件将只提供一个索引文件，该文件不过是包含所有页面内容的JSON文件。 主题需要在客户端实现自己的搜索功能。 但是，通过一些设置和必要的模板，插件可以提供基于<a href="https://lunrjs.com/">lunr.js</a>的完整功能的客户端搜索工具。</p>
+<p>需要将以下HTML添加到主题中，以便提供的JavaScript能够正确加载搜索脚本并从当前页面进行搜索结果的相对链接。</p>
+<pre><code class="language-django">&lt;script&gt;var base_url = '{{ base_url }}';&lt;/script&gt;
+</code></pre>
+<p>使用正确配置的设置，模板中的以下HTML将为您的主题添加完整的搜索实现。</p>
+<pre><code class="language-django">&lt;h1 id=&quot;search&quot;&gt;Search Results&lt;/h1&gt;
+
+&lt;form action=&quot;search.html&quot;&gt;
+  &lt;input name=&quot;q&quot; id=&quot;mkdocs-search-query&quot; type=&quot;text&quot; &gt;
+&lt;/form&gt;
+
+&lt;div id=&quot;mkdocs-search-results&quot;&gt;
+  Sorry, page not found.
+&lt;/div&gt;
+</code></pre>
+<p>插件中的JavaScript通过查找上述HTML中使用的特定ID来工作。 用户键入搜索查询的表单输入必须使用<code>id =“mkdocs-search-query”来标识，并且必须使用</code>id =“mkdocs-search-results”来识别将放置结果的div。</p>
+<p>该插件支持在[theme的配置文件]<code>mkdocs_theme.yml</code>中设置以下选项：</p>
+<h3 id="include_search_page">include_search_page</h3>
+<p>确定搜索插件是否期望主题通过位于<code>search / search.html</code>的模板提供专用搜索页面。</p>
+<p>当<code>include_search_page</code>设置为<code>true</code>时，搜索模板将在<code>search / search.html</code>上构建并可用。 这个方法被<code>readthedocs</code>主题使用。</p>
+<p>当<code>include_search_page</code>设置为<code>false</code>或未定义时，预期主题提供一些其他显示搜索结果的机制。 例如，<code>mkdocs</code>主题通过模态在任何页面上显示结果。</p>
+<h3 id="search_index_only">search_index_only</h3>
+<p>确定搜索插件是仅生成搜索索引还是生成完整的搜索解决方案。</p>
+<p>当<code>search_index_only</code>设置为<code>false</code>时，搜索插件通过添加自己的<code>templates</code>目录（优先级低于主题）来修改Jinja环境，并将其脚本添加到<code>extra_javascript</code>配置设置中。</p>
+<p>当<code>search_index_only</code>设置为<code>true</code>或未定义时，搜索插件不会对Jinja环境进行任何修改。使用提供的索引文件的完整解决方案是主题的责任。</p>
+<p>搜索索引将写入<a href="../configuration/#site_dir">site_dir</a>中的<code>search / search_index.json</code>JSON文件。该文件中包含的JSON对象最多可包含三个对象。</p>
+<pre><code class="language-json">{
+    config: {...},
+    data: [...],
+    index: {...}
+}
+</code></pre>
+<p>如果存在，<code>config</code>对象包含在<code>plugings.search</code>下用户的<code>mkdocs.yml</code>配置文件中为插件定义的配置选项的键/值对。 <code>config</code>对象是MkDocs版本<em> 1.0 </em>中的新对象。</p>
+<p><code>data</code>对象包含文档对象列表。 每个文档对象由“位置”（URL），“标题”和“文本”组成，可用于创建搜索索引和/或显示搜索结果。</p>
+<p>如果存在，<code>index</code>对象包含一个预构建的索引，它为较大的站点提供性能改进。 请注意，仅当用户明确启用<a href="../configuration/#prebuild_index">prebuild_index</a>配置选项时，才会创建预构建索引。 主题应该期望索引不存在，但可以选择在可用时使用索引。 <code>index</code>对象是MkDocs版本<em> 1.0 </em>中的新对象。</p>
+<h2 id="_10">打包主题</h2>
+<p>MkDocs利用<a href="https://packaging.python.org/en/latest/">Python packaging</a>来分发主题。 这有一些要求。</p>
+<p>要查看包含一个主题的包的示例，请参阅<a href="https://mkdocs.github.io/mkdocs-bootstrap/">MkDocs Bootstrap主题</a>;查看包含许多主题的包，请参阅<a href="https://mkdocs.github.io/mkdocs-bootswatch/">MkDocs Bootswatch主题</a>。</p>
+<p>!!! Note "注意："</p>
+<pre><code>打包主题并不是绝对必要的，因为整个主题可以包含在`custom_dir`中。如果你创造了一个“一次性主题”，那就足够了。 但是，如果您打算将主题分发给其他人使用，则打包主题具有一些优势。通过打包您的主题，您的用户可以更轻松地安装它，然后他们可以利用[custom_dir]对您的主题进行调整，以更好地满足他们的需求。
+</code></pre>
+<h3 id="_11">包布局</h3>
+<p>建议主题使用以下布局。 顶级目录中的两个文件名为<code>MANIFEST.in</code>和主题目录旁边的<code>setup.py</code>，其中包含一个空的<code>__init __。py</code>文件，一个主题配置文件（<code>mkdocs-theme.yml</code>），以及模板和媒体文件。</p>
+<pre><code class="language-no-highlight">.
+|-- MANIFEST.in
+|-- theme_name
+|   |-- __init__.py
+|   |-- mkdocs-theme.yml
+|   |-- main.html
+|   |-- styles.css
+`-- setup.py
+</code></pre>
+<p><code>MANIFEST.in</code>文件应包含以下内容，但更新了theme_name，并在include中添加了任何额外的文件扩展名。</p>
+<pre><code class="language-no-highlight">recursive-include theme_name *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+</code></pre>
+<p><code>setup.py</code>应该包含以下文本以及下面描述的修改。</p>
+<pre><code class="language-python">from setuptools import setup, find_packages
+
+VERSION = '0.0.1'
+
+
+setup(
+    name=&quot;mkdocs-themename&quot;,
+    version=VERSION,
+    url='',
+    license='',
+    description='',
+    author='',
+    author_email='',
+    packages=find_packages(),
+    include_package_data=True,
+    entry_points={
+        'mkdocs.themes': [
+            'themename = theme_name',
+        ]
+    },
+    zip_safe=False
+)
+</code></pre>
+<p>填写URL，许可证，说明，作者和作者电子邮件地址。</p>
+<p>该名称应遵循惯例<code>mkdocs-themename</code>（如<code>mkdocs-bootstrap</code>和<code>mkdocs-bootswatch</code>），从MkDocs开始，使用连字符分隔单词并包括主题名称。</p>
+<p>该文件的大部分内容可以未经编辑。 我们需要更改的最后一部分是entry_points。 这就是MkDocs如何找到您在包中包含的主题。左侧的名称是用户将在其mkdocs.yml中使用的名称，右侧的名称是包含主题文件的目录。</p>
+<p>您在本节开头使用main.html文件创建的目录应包含所有其他主题文件。 最低要求是它包含主题的“main.html”。 它<strong>必须</strong>还包括一个应该为空的<code>__init __。py</code>文件，这个文件告诉Python该目录是一个包。</p>
+<h3 id="_12">主题配置</h3>
+<p>打包的主题需要包含名为<code>mkdocs_theme.yml</code>的配置文件，该文件放在模板文件的根目录中。该文件应包含主题的默认配置选项。 但是，如果主题不提供配置选项，则仍需要该文件，并且可以留空。</p>
+<p>主题作者可以自由定义任何认为必要的任意选项，并且这些选项将在模板中提供以控制行为。例如，主题可能希望侧边栏可选，并在<code>mkdocs_theme.yml</code>文件中包含以下内容：</p>
+<pre><code class="language-yaml">show_sidebar: true
+</code></pre>
+<p>然后在模板中，可以引用该配置选项：</p>
+<pre><code class="language-django">{% if config.theme.show_sidebar %}
+&lt;div id=&quot;sidebar&quot;&gt;...&lt;/div&gt;
+{% endif %}
+</code></pre>
+<p>用户可以覆盖项目的<code>mkdocs.yml</code>配置文件中的默认值：</p>
+<pre><code class="language-yaml">theme:
+    name: themename
+    show_sidebar: false
+</code></pre>
+<p>除了主题定义的任意选项外，MkDoc还定义了一些改变其行为的特殊选项：</p>
+<p>!!! block ""</p>
+<pre><code>#### static_templates
+
+此选项镜像同名的[theme]配置选项，并允许主题设置一些默认值。 请注意，虽然用户可以向此列表添加模板，但用户无法删除主题配置中包含的模板。
+
+#### extends
+
+定义此主题继承的父主题。 该值应该是父主题的字符串名称。 正常的Jinja继承规则适用。
+</code></pre>
+<p>插件还可以定义一些选项，允许主题通知插件它期望的插件选项集。 请参阅文档，了解您可能希望在主题中支持的任何插件。</p>
+<h3 id="_13">分发主题</h3>
+<p>通过上述更改，您的主题现在应该可以安装了。 如果你仍然和setup.py在同一目录下，可以使用pip install。来完成这个。</p>
+<p>大多数Python包，包括MkDocs，都是在PyPI上发布的。 为此，您应该运行以下命令。</p>
+<pre><code class="language-no-highlight">python setup.py register
+</code></pre>
+<p>如果您没有设置帐户，系统会提示您创建帐户。</p>
+<p>有关更详细的指南，请参阅[打包和分发项目]的官方Python打包文档。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../deploying-your-docs/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 部署文档" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              部署文档
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../plugins/" class="md-footer__link md-footer__link--next" aria-label="下一页: 插件" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              插件
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://blog.yyang.in">Yang's Blog</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>

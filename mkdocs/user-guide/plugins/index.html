@@ -1,0 +1,1476 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://blog.yyang.in/mkdocs/user-guide/plugins/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>插件 - Yang's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mkdocs" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yang&#39;s Blog" class="md-header__button md-logo" aria-label="Yang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yang's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              插件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yangyang1989/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Yang's GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../article/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="md-tabs__link">
+        文章
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../writing-your-docs/" class="md-tabs__link md-tabs__link--active">
+        MkDocs中文文档
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yang&#39;s Blog" class="md-nav__button md-logo" aria-label="Yang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yang's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yangyang1989/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Yang's GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          文章
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文章" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          文章
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../article/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="md-nav__link">
+        第一篇文章
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../article/%E6%B5%8B%E8%AF%95%E9%93%BE%E6%8E%A5%E8%A7%86%E9%A2%91/" class="md-nav__link">
+        测试typora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          MkDocs中文文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MkDocs中文文档" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          MkDocs中文文档
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          用户指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="用户指南" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          用户指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-your-docs/" class="md-nav__link">
+        编写文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styling-your-docs/" class="md-nav__link">
+        设置文档样式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        配置文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying-your-docs/" class="md-nav__link">
+        部署文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-themes/" class="md-nav__link">
+        自定义主题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          插件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        插件
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    安装插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    使用插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    开发插件
+  </a>
+  
+    <nav class="md-nav" aria-label="开发插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseplugin" class="md-nav__link">
+    BasePlugin
+  </a>
+  
+    <nav class="md-nav" aria-label="BasePlugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_scheme" class="md-nav__link">
+    config_scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_configoptions" class="md-nav__link">
+    load_config(options)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_event_name" class="md-nav__link">
+    on_&lt;event_name&gt;()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    事件
+  </a>
+  
+    <nav class="md-nav" aria-label="事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    全局事件
+  </a>
+  
+    <nav class="md-nav" aria-label="全局事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_serve" class="md-nav__link">
+    on_serve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_config" class="md-nav__link">
+    on_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_build" class="md-nav__link">
+    on_pre_build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_files" class="md-nav__link">
+    on_files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_nav" class="md-nav__link">
+    on_nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_env" class="md-nav__link">
+    on_env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_build" class="md-nav__link">
+    on_post_build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    模板事件
+  </a>
+  
+    <nav class="md-nav" aria-label="模板事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_template" class="md-nav__link">
+    on_pre_template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_template_context" class="md-nav__link">
+    on_template_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_template" class="md-nav__link">
+    on_post_template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    页面事件
+  </a>
+  
+    <nav class="md-nav" aria-label="页面事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_page" class="md-nav__link">
+    on_pre_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_read_source" class="md-nav__link">
+    on_page_read_source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_markdown" class="md-nav__link">
+    on_page_markdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_content" class="md-nav__link">
+    on_page_content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_context" class="md-nav__link">
+    on_page_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_page" class="md-nav__link">
+    on_post_page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    Entry Point
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          关于MkDocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="关于MkDocs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          关于MkDocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    安装插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    使用插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    开发插件
+  </a>
+  
+    <nav class="md-nav" aria-label="开发插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseplugin" class="md-nav__link">
+    BasePlugin
+  </a>
+  
+    <nav class="md-nav" aria-label="BasePlugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_scheme" class="md-nav__link">
+    config_scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_configoptions" class="md-nav__link">
+    load_config(options)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_event_name" class="md-nav__link">
+    on_&lt;event_name&gt;()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    事件
+  </a>
+  
+    <nav class="md-nav" aria-label="事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    全局事件
+  </a>
+  
+    <nav class="md-nav" aria-label="全局事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_serve" class="md-nav__link">
+    on_serve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_config" class="md-nav__link">
+    on_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_build" class="md-nav__link">
+    on_pre_build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_files" class="md-nav__link">
+    on_files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_nav" class="md-nav__link">
+    on_nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_env" class="md-nav__link">
+    on_env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_build" class="md-nav__link">
+    on_post_build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    模板事件
+  </a>
+  
+    <nav class="md-nav" aria-label="模板事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_template" class="md-nav__link">
+    on_pre_template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_template_context" class="md-nav__link">
+    on_template_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_template" class="md-nav__link">
+    on_post_template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    页面事件
+  </a>
+  
+    <nav class="md-nav" aria-label="页面事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on_pre_page" class="md-nav__link">
+    on_pre_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_read_source" class="md-nav__link">
+    on_page_read_source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_markdown" class="md-nav__link">
+    on_page_markdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_content" class="md-nav__link">
+    on_page_content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_page_context" class="md-nav__link">
+    on_page_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on_post_page" class="md-nav__link">
+    on_post_page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    Entry Point
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/yangyang1989/blog/edit/master/docs/mkdocs/user-guide/plugins.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="mkdocs">MkDocs插件</h1>
+<p>安装，使用和创建MkDocs插件的指南</p>
+<hr />
+<h2 id="_1">安装插件</h2>
+<p>在使用插件之前，必须将其安装在系统上。 如果您使用的是MkDocs附带的插件，则在安装MkDocs时会安装它。 但是，要安装第三方插件，您需要确定相应的软件包名称并使用<code>pip</code>进行安装：</p>
+<pre><code class="language-bash">pip install mkdocs-foo-plugin
+</code></pre>
+<p>插件成功安装后即可使用。 它只需要在配置文件中<a href="＃using-plugins">启用</a>。</p>
+<h2 id="_2">使用插件</h2>
+<p><a href="../configuration/#plugins"><code>plugins</code></a>配置选项应包含构建站点时要使用的插件列表。 每个“插件”必须是分配给插件的字符串名称（请参阅给定插件的文档以确定其“名称”）。 此处列出的插件必须已经<a href="#instalting-plugins">安装</a>。</p>
+<pre><code class="language-yaml">plugins:
+    - search
+</code></pre>
+<p>某些插件可能提供自己的配置选项。 如果要设置任何配置选项，则可以嵌套给定插件支持的任何选项的键/值映射（<code>option_name：option value</code>）。请注意冒号（<code>：</code>）必须遵循插件名称，然后在新行上，选项名称和值必须缩进并用冒号分隔。如果要为单个插件定义多个选项，则必须在单独的行上定义每个选项。</p>
+<pre><code class="language-yaml">plugins:
+    - search:
+        lang: en
+        foo: bar
+</code></pre>
+<p>有关给定插件可用配置选项的信息，请参阅该插件的文档。</p>
+<p>有关默认插件的列表以及如何覆盖它们，请参阅<a href="../configuration/#plugins">配置文件</a>文档。</p>
+<h2 id="_3">开发插件</h2>
+<p>像MkDocs一样，插件必须用Python编写。 通常期望每个插件将作为单独的Python模块分发，尽管可以在同一模块中定义多个插件。 至少，MkDocs插件必须由<a href="#baseplugin">BasePlugin</a>子类和指向它的<a href="#entry-point">entry point</a>组成。</p>
+<h3 id="baseplugin">BasePlugin</h3>
+<p><code>mkdocs.plugins.BasePlugin</code>的子类应该定义插件的行为。该类通常包括对构建过程中的特定事件执行的操作以及插件的配置方案。</p>
+<p>所有<code>BasePlugin</code>子类都包含以下属性：</p>
+<h4 id="config_scheme">config_scheme</h4>
+<p>:   配置验证实例的元组。 每个项目必须包含一个两项元组，其中第一项是配置选项的字符串名称，第二项是<code>mkdocs.config.config_options.BaseConfigOption</code>或其任何子类的实例。</p>
+<pre><code>例如，以下`config_scheme`定义了三个配置选项：`foo`，它接受一个字符串; `bar`，接受一个整数; 和`baz`，它接受一个布尔值。
+
+    class MyPlugin(mkdocs.plugins.BasePlugin):
+        config_scheme = (
+            ('foo', mkdocs.config.config_options.Type(mkdocs.utils.string_types, default='a default value')),
+            ('bar', mkdocs.config.config_options.Type(int, default=0)),
+            ('baz', mkdocs.config.config_options.Type(bool, default=True))
+        )
+
+加载用户配置后，将使用上述方案验证配置并填写用户未提供的设置的任何默认值。验证类可以是`mkdocs.config.config_options`中提供的任何类，也可以是插件中定义的第三方子类。
+
+用户提供的任何验证失败或未在`config_scheme`中定义的设置都会引发`mkdocs.config.base.ValidationError`。
+</code></pre>
+<h4 id="config">config</h4>
+<p>:   插件的配置选项字典，在配置验证完成后由<code>load_config</code>方法填充。 使用此属性可以访问用户提供的选项。</p>
+<pre><code>    def on_pre_build(self, config):
+        if self.config['bool_option']:
+            # implement "bool_option" functionality here...
+</code></pre>
+<p>所有<code>BasePlugin</code>子类都包含以下方法：</p>
+<h4 id="load_configoptions">load_config(options)</h4>
+<p>:   从选项字典加载配置。 返回<code>（错误，警告）</code>的元组。MkDocs在配置验证期间调用此方法，并且不需要由插件调用。</p>
+<h4 id="on_event_name">on_&lt;event_name&gt;()</h4>
+<p>:   定义特定[事件]行为的可选方法。 插件应该在这些方法中定义它的行为。 将<code>&lt;event_name&gt;</code>替换为事件的实际名称。 例如，<code>pre_build</code>事件将在<code>on_pre_build</code>方法中定义。</p>
+<pre><code>大多数事件接受一个位置参数和各种关键字参数。 通常期望插件修改（或替换）位置参数并返回。 如果没有返回任何内容（该方法返回“None”），则使用原始未修改的对象。简单地提供关键字参数以提供可用于确定如何修改位置参数的上下文和/或供应数据。 接受关键字参数为“** kwargs”是一种好习惯。如果在未来版本的MkDocs中为事件提供了其他关键字，则无需更改您的插件。
+
+例如，以下事件会向主题配置添加额外的static_template：
+
+    class MyPlugin(BasePlugin):
+        def on_config(self, config, **kwargs):
+            config['theme'].static_templates.add('my_template.html')
+            return config
+</code></pre>
+<h3 id="_4">事件</h3>
+<p>有三种事件：[全局事件]，[页面事件]和[模板事件]。</p>
+<h4 id="_5">全局事件</h4>
+<p>在构建过程的开始或结束时，每个构建都会调用一次全局事件。在这些事件中所做的任何更改都将对整个站点产生全局影响。</p>
+<h5 id="on_serve">on_serve</h5>
+<p>:   只有在开发过程中使用<code>serve</code>命令时才会调用<code>serve</code>事件。 它传递给<code>Server</code>实例，可以在激活之前进行修改。 例如，可以将附加文件或目录添加到“监视”文件列表中以进行自动重新加载。</p>
+<pre><code>Parameters:
+: __server:__ `livereload.Server`的实例
+: __config:__ 全局配置对象
+
+Returns:
+: `livereload.Server`的实例
+</code></pre>
+<h5 id="on_config">on_config</h5>
+<p>:   <code>config</code>事件是第一个在构建时调用的事件，在加载和验证用户配置后立即运行。 应在此处对配置进行任何更改。</p>
+<pre><code>Parameters:
+: __config:__ 全局配置对象
+
+Returns:
+: 全局配置对象
+</code></pre>
+<h5 id="on_pre_build">on_pre_build</h5>
+<p>:   <code>pre_build</code>事件不会改变任何变量。 使用此事件可以调用预构建脚本。</p>
+<pre><code>Parameters:
+: __config:__ 全局配置对象
+</code></pre>
+<h5 id="on_files">on_files</h5>
+<p>:   从<code>docs_dir</code>填充文件集合后调用<code>files</code>事件。 使用此事件可以添加，删除或更改集合中的文件。 请注意，Page对象尚未与集合中的文件对象关联。 使用[页面事件]来处理页面特定数据。</p>
+<pre><code>Parameters:
+: __files:__ 全局配置对象
+: __config:__ 全局配置对象
+
+Returns:
+: 全局文件集合
+</code></pre>
+<h5 id="on_nav">on_nav</h5>
+<p>:   创建站点导航后会调用<code>nav</code>事件，并可用于更改站点导航。</p>
+<pre><code>Parameters:
+: __nav:__ 全局导航对象
+: __config:__ 全局配置对象
+: __files:__ 全局文件集合
+
+Returns:
+: 全局导航对象
+</code></pre>
+<h5 id="on_env">on_env</h5>
+<p>:   在创建Jinja模板环境之后调用<code>env</code>事件，并且可以使用它来改变Jinja环境。</p>
+<pre><code>Parameters:
+: __env:__ 全局Jinja环境
+: __config:__ 全局配置对象
+: __files:__ 全局文件集合
+
+Returns:
+: 全局Jinja环境
+</code></pre>
+<h5 id="on_post_build">on_post_build</h5>
+<p>:   <code>post_build</code>事件不会改变任何变量。 使用此事件来调用构建后脚本。</p>
+<pre><code>Parameters:
+: __config:__ 全局配置对象
+</code></pre>
+<h4 id="_6">模板事件</h4>
+<p>为每个非页面模板调用一次模板事件。 将为<a href="../configuration/#extra_templates">extra_templates</a>配置设置中定义的每个模板以及主题中定义的任何<a href="../configuration/#static_templates">static_templates</a>调用每个模板事件。 所有模板事件在<a href="#on_env">env</a>事件之后和任何[页面事件]之前调用。</p>
+<h5 id="on_pre_template">on_pre_template</h5>
+<p>:   加载主题模板后立即调用<code>pre_template</code>事件，可用于更改模板的内容。</p>
+<pre><code>Parameters:
+: __template__: 模板内容为字符串
+: __template_name__: 模板的字符串文件名
+: __config:__ 全局配置对象
+
+Returns:
+: 模板内容为字符串
+</code></pre>
+<h5 id="on_template_context">on_template_context</h5>
+<p>:   在为主题模板创建上下文之后立即调用<code>template_context</code>事件，并且可以仅使用该事件来更改该特定模板的上下文。</p>
+<pre><code>Parameters:
+: __context__: 模板上下文变量的字典
+: __template_name__: 模板的字符串文件名
+: __config:__ 全局配置对象
+
+Returns:
+: 模板上下文变量的字典
+</code></pre>
+<h5 id="on_post_template">on_post_template</h5>
+<p>:   <code>post_template</code>事件在渲染模板后调用，但在写入光盘之前调用，可用于更改模板的输出。如果返回空字符串，则跳过该模板，并且没有任何内容写入光盘。</p>
+<pre><code>Parameters:
+: __output_content__: 将呈现的模板输出为字符串
+: __template_name__: 模板的字符串文件名
+: __config:__ 全局配置对象
+
+Returns:
+: 将呈现的模板输出为字符串
+</code></pre>
+<h4 id="_7">页面事件</h4>
+<p>对于网站中包含的每个Markdown页面，都会调用一次页面事件。 所有页面事件在<a href="#on_post_template">post_template</a>事件之后和<a href="#on_post_build">post_build</a>事件之前调用。</p>
+<h5 id="on_pre_page">on_pre_page</h5>
+<p>:   在对主题页面执行任何操作之前调用<code>pre_page</code>事件，并且可以使用它来更改<code>Page</code>实例。</p>
+<pre><code>Parameters:
+: __page:__ `mkdocs.nav.Page` 的实例
+: __config:__ 全局配置对象
+: __files:__ 全局文件集合
+
+Returns:
+: `mkdocs.nav.Page` 实例
+</code></pre>
+<h5 id="on_page_read_source">on_page_read_source</h5>
+<p>:   <code>on_page_read_source</code>事件可以替换默认机制，以从文件系统中读取页面源的内容。</p>
+<pre><code>Parameters:
+: __page:__ `mkdocs.nav.Page`实列
+: __config:__ 全局配置对象
+
+Returns:
+: 页面的原始源作为unicode字符串。 如果返回“None”，则将执行文件的默认加载。
+</code></pre>
+<h5 id="on_page_markdown">on_page_markdown</h5>
+<p>:   在从文件加载页面标记后，调用<code>page_markdown</code>事件，可用于更改Markdown源文本。元数据已被剥离，此时可以作为“page.meta”使用。</p>
+<pre><code>Parameters:
+: __markdown:__ Markdown源文本作为字符串
+: __page:__ `mkdocs.nav.Page`实例
+: __config:__ 全局配置对象
+: __files:__ 全局文件集合
+
+Returns:
+: Markdown源文本作为字符串
+</code></pre>
+<h5 id="on_page_content">on_page_content</h5>
+<p>:   在将Markdown文本呈现为HTML（但在传递给模板之前）之后调用<code>page_content</code>事件，并且可以使用该事件来更改页面的HTML主体。</p>
+<pre><code>Parameters:
+: __html:__ 从Markdown源呈现的HTML作为字符串
+: __page:__ `mkdocs.nav.Page`实例
+: __config:__ 全局配置对象
+: __files:__ 全局文件集合
+
+Returns:
+: 从Markdown源呈现的HTML作为字符串
+</code></pre>
+<h5 id="on_page_context">on_page_context</h5>
+<p>:   在创建页面的上下文之后调用<code>page_context</code>事件，并且该事件可用于仅更改该特定页面的上下文。</p>
+<pre><code>Parameters:
+: __context__: 模板上下文变量的字典
+: __page:__ `mkdocs.nav.Page`实例
+: __config:__ 全局配置对象
+: __nav:__ 全局导航对象
+
+Returns:
+: 模板上下文变量的字典
+</code></pre>
+<h5 id="on_post_page">on_post_page</h5>
+<p>:   在呈现模板之后，但在将其写入光盘之前调用<code>post_page</code>事件，并且可以使用该事件来改变页面的输出。 如果返回空字符串，则跳过该页面并且不会将任何内容写入光盘。</p>
+<pre><code>Parameters:
+: __output:__ 将呈现的模板输出为字符串
+: __page:__ `mkdocs.nav.Page`实例
+: __config:__ 全局配置对象
+
+Returns:
+: 将呈现的模板输出为字符串
+</code></pre>
+<h3 id="entry-point">Entry Point</h3>
+<p>插件需要打包为Python库（分布在PyPI上，与MkDocs分开），每个插件必须通过setuptools entry_point注册为插件。 将以下内容添加到<code>setup.py</code>脚本中：</p>
+<pre><code class="language-python">entry_points={
+    'mkdocs.plugins': [
+        'pluginname = path.to.some_plugin:SomePluginClass',
+    ]
+}
+</code></pre>
+<p><code>pluginname</code>将是用户使用的名称（在配置文件中）；<code>path.to.some_plugin：SomePluginClass</code>将是可导入的插件本身（<code>from path.to.some_plugin import SomePluginClass</code>）其中<code>SomePluginClass</code>是 <a href="#baseplugin">BasePlugin</a>的子类，定义插件行为。 当然，多个插件类可以存在于同一个模块中。 只需将每个定义为单独的entry_point即可。</p>
+<pre><code class="language-python">entry_points={
+    'mkdocs.plugins': [
+        'featureA = path.to.my_plugins:PluginA',
+        'featureB = path.to.my_plugins:PluginB'
+    ]
+}
+</code></pre>
+<p>请注意，注册插件不会激活它。 如果通过配置，用户仍然需要告诉MkDocs使用。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../custom-themes/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 自定义主题" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              自定义主题
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../about/release-notes/" class="md-footer__link md-footer__link--next" aria-label="下一页: 发行说明" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              发行说明
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://blog.yyang.in">Yang's Blog</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>

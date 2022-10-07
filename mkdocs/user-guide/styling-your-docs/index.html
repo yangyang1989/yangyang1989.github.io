@@ -1,0 +1,1132 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://blog.yyang.in/mkdocs/user-guide/styling-your-docs/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>设置文档样式 - Yang's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yang&#39;s Blog" class="md-header__button md-logo" aria-label="Yang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yang's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              设置文档样式
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yangyang1989/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Yang's GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../article/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="md-tabs__link">
+        文章
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../writing-your-docs/" class="md-tabs__link md-tabs__link--active">
+        MkDocs中文文档
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yang&#39;s Blog" class="md-nav__button md-logo" aria-label="Yang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yang's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yangyang1989/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Yang's GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          文章
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文章" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          文章
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../article/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="md-nav__link">
+        第一篇文章
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../article/%E6%B5%8B%E8%AF%95%E9%93%BE%E6%8E%A5%E8%A7%86%E9%A2%91/" class="md-nav__link">
+        测试typora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          MkDocs中文文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MkDocs中文文档" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          MkDocs中文文档
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          用户指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="用户指南" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          用户指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-your-docs/" class="md-nav__link">
+        编写文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          设置文档样式
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        设置文档样式
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内置主题
+  </a>
+  
+    <nav class="md-nav" aria-label="内置主题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readthedocs" class="md-nav__link">
+    readthedocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第三方主题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自定义主题
+  </a>
+  
+    <nav class="md-nav" aria-label="自定义主题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docs_dir" class="md-nav__link">
+    使用docs_dir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom_dir" class="md-nav__link">
+    使用主题的custom_dir
+  </a>
+  
+    <nav class="md-nav" aria-label="使用主题的custom_dir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    覆盖模板块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom_dir_1" class="md-nav__link">
+    组合custom_dir和模板块
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        配置文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying-your-docs/" class="md-nav__link">
+        部署文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-themes/" class="md-nav__link">
+        自定义主题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        插件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          关于MkDocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="关于MkDocs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          关于MkDocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内置主题
+  </a>
+  
+    <nav class="md-nav" aria-label="内置主题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readthedocs" class="md-nav__link">
+    readthedocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第三方主题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自定义主题
+  </a>
+  
+    <nav class="md-nav" aria-label="自定义主题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docs_dir" class="md-nav__link">
+    使用docs_dir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom_dir" class="md-nav__link">
+    使用主题的custom_dir
+  </a>
+  
+    <nav class="md-nav" aria-label="使用主题的custom_dir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    覆盖模板块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom_dir_1" class="md-nav__link">
+    组合custom_dir和模板块
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/yangyang1989/blog/edit/master/docs/mkdocs/user-guide/styling-your-docs.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="_1">设置文档样式</h1>
+<p>如何设置文档的样式和主题。</p>
+<hr />
+<p>MkDocs包括一些<a href="#built-in-themes">内置主题</a>以及各种[第三方主题]，所有这些都可以使用<a href="#using-the-docs_dir">额外的CSS或JavaScript</a>轻松定制，或者覆盖主题的<a href="../configuration/#custom_dir">custom_dir</a>。 您也可以为你的文档从头开始创建自己的<a href="../custom-themes/">自定义主题</a>。</p>
+<p>要使用MkDocs中包含的主题，只需将其添加到您的<code>mkdocs.yml</code>配置文件中。</p>
+<pre><code>theme: readthedocs
+</code></pre>
+<p>使用下面的<a href="#built-in-themes">内置主题</a>中列出的任一一种替换掉<a href="#readthedocs"><code>readthedocs</code></a>。</p>
+<p>要创建新的自定义主题，请参阅<a href="../custom-themes/">自定义主题</a>[custom theme]页面，或者更多地自定义现有主题，请参阅下面的<a href="#customizing-a-theme">自定义主题</a>部分。</p>
+<h2 id="_2">内置主题</h2>
+<h3 id="mkdocs">mkdocs</h3>
+<p>MkDocs的默认主题，使用修改过的<a href="https://getbootstrap.com/">Bootstrap</a>构建而成，支持MkDocs的大部分功能。官方只支持两级导航。参见 #1107）</p>
+<p><img alt="mkdocs" src="../../img/mkdocs.png" /></p>
+<p>除了默认的[主题配置选项]之外，<code>mkdocs</code>主题还支持以下选项：</p>
+<ul>
+<li>
+<p><strong><code>highlightjs</code></strong>：JavaScript库在代码块中突出显示源代码。 默认值：<code>True</code>。</p>
+</li>
+<li>
+<p><strong><code>hljs_style</code></strong>：highlight.js库提供79种不同的[样式]（颜色变化），用于突出显示代码块中的源代码。 将其设置为所需样式的名称。 默认值：<code>github</code>。</p>
+</li>
+<li>
+<p><strong><code>hljs_languages</code></strong>：them.默认情况下，highlight.js仅支持23种常用语言。在此列出额外需要支持的语言。</p>
+<pre><code>theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+</code></pre>
+</li>
+<li>
+<p><strong><code>shortcuts</code></strong>：定义键盘快捷键。</p>
+<pre><code>theme:
+    name: mkdocs
+    shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+</code></pre>
+<p>所有值都是数字键代码。 最好使用所有键盘上都有的键。 您可以使用<a href="https://keycode.info/">https://keycode.info/</a>来确定给定的键的代码。</p>
+<ul>
+<li>
+<p><strong><code>help</code></strong>：显示一个列出键盘快捷键的帮助模式。默认：<code>191</code>（＆quest;）</p>
+</li>
+<li>
+<p><strong><code>next</code></strong>：导航到“下一页”。 默认值：<code>78</code>（n）</p>
+</li>
+<li>
+<p><strong><code>previous</code></strong>：导航到“上一页”。 默认值：<code>80</code>（p）</p>
+</li>
+<li>
+<p><strong><code>search</code></strong>：显示搜索模式。 默认值：<code>83</code>（s）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="readthedocs">readthedocs</h3>
+<p><a href="https://readthedocs.org/">Read the Docs</a>服务使用的默认主题的克隆，它提供与其父主题相同的受限制功能集。 与其父主题一样，仅支持两个级别的导航。</p>
+<p><img alt="ReadTheDocs" src="../../img/readthedocs.png" /></p>
+<p>除了默认的[主题配置选项]之外，<code>readthedocs</code>主题还支持以下选项：</p>
+<ul>
+<li>
+<p><strong><code>highlightjs</code></strong>：使用<a href="https://highlightjs.org/">highlight.js</a> JavaScript库在代码块中突出显示源代码。 默认值：<code>True</code>。</p>
+</li>
+<li>
+<p><strong><code>hljs_languages</code></strong>：默认情况下，highlight.js仅支持23种常用语言。在此列出额外需要支持的语言。</p>
+<pre><code>theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+</code></pre>
+</li>
+<li>
+<p><strong><code>include_homepage_in_sidebar</code></strong>：列出侧栏菜单中的主页。由于MkDocs要求在“nav”配置选项中列出主页，因此此设置允许在侧栏中包含或排除主页。请注意，站点名称/Logo始终链接到主页。默认：<code>True</code>。</p>
+</li>
+<li>
+<p><strong><code>prev_next_buttons_location</code></strong>：<code>bottom</code>, <code>top</code>, <code>both</code> 和 <code>none</code>中的一个值。相应地显示“下一步”和“上一步”按钮。 默认值：<code>bottom</code>。</p>
+</li>
+<li>
+<p><strong><code>navigation_depth</code></strong>：侧栏中导航树的最大深度。 默认值：<code>4</code>。</p>
+</li>
+<li>
+<p><strong><code>collapse_navigation</code></strong>：仅包含当前页面侧栏中的页面部分标题。 默认值：<code>True</code>。</p>
+</li>
+<li>
+<p><strong><code>titles_only</code></strong>：仅包含侧栏中的页面标题，不包括所有页面的所有节标题。 默认值：<code>False</code>。</p>
+</li>
+<li>
+<p><strong><code>sticky_navigation</code></strong>：如果为True，则在滚动页面时使侧边栏与主页面内容一起滚动。 默认值：<code>True</code>。</p>
+</li>
+</ul>
+<h3 id="_3">第三方主题</h3>
+<p>可以在MkDocs<a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">community wiki</a>中找到第三方主题列表。 如果您已创建自己的，请随时将其添加到列表中。</p>
+<h2 id="_4">自定义主题</h2>
+<p>如果您想对现有主题进行一些调整，则无需从头开始创建自己的主题。对于只需要一些CSS和（或）JavaScript的小调整，您可以使用<a href="#using-the-docs_dir">docs_dir</a>。但是，对于更复杂的自定义（包括覆盖模板），您需要使用主题的<a href="../configuration/#custom_dir">custom_dir</a>设置。</p>
+<h3 id="docs_dir">使用docs_dir</h3>
+<p><a href="../configuration/#extra_css">extra_css</a>和<a href="../configuration/#extra_javascript">extra_javascript</a>配置选项可用于对现有主题进行调整和自定义。要使用它们，您只需要在[文档目录]中包含CSS或JavaScript文件。</p>
+<p>例如，要更改文档中标题的颜色，请创建一个名为<code>extra.css</code>的文件，并将其放在文档Markdown旁边。 在该文件中添加以下CSS。</p>
+<pre><code class="language-CSS">h1 {
+  color: red;
+}
+</code></pre>
+<p>!!! note</p>
+<pre><code>如果您使用[ReadTheDocs]部署文档。 您需要明确列出要包含在配置中的CSS和JavaScript文件。为此，请将以下内容添加到mkdocs.yml中。
+
+    extra_css: [extra.css]
+</code></pre>
+<p>在进行这些更改之后，当你运行<code>mkdocs serve</code>后将能看到效果。运行该命令后将会，CSS所做的改变将自动更新。</p>
+<p>!!! note</p>
+<pre><code>Any extra CSS or JavaScript files will be added to the generated HTML document after the page content. If you desire to include a JavaScript library, you may have better success including the library by using the theme [custom_dir].
+在页面内容之后，任何额外的CSS或JavaScript文件都将添加到生成的HTML文档中。如果您希望包含JavaScript库，则可以通过使用主题的[custom_dir]获得更好支持。
+</code></pre>
+<h3 id="custom_dir">使用主题的custom_dir</h3>
+<p>主题的<a href="../configuration/#custom_dir">custom_dir</a>配置选项可用于指向覆盖父主题目录中的文件。父主题将是主题中<a href="../configuration/#name">name</a>配置选项定义的主题。 <code>custom_dir</code>中与父主题中的文件同名的任何文件都将替换父主题中同名文件。<code>custom_dir</code>中的任何其他文件都将添加到父主题中。 <code>custom_dir</code>的内容应该镜像父主题的目录结构。您可以包含模板，JavaScript文件，CSS文件，图像，字体或主题中包含的任何其他媒体文件。</p>
+<p>!!! Note</p>
+<pre><code>为此，主题的`name`设置必须设置为已知的已安装主题。 如果`name`设置被设置为`null`（或未定义[custom theme]。
+</code></pre>
+<p>For example, the <a href="#mkdocs">mkdocs</a> theme (<a href="https://github.com/mkdocs/mkdocs/tree/master/mkdocs/themes/mkdocs">browse source</a>), contains the following directory structure (in part):
+例如，<a href="#mkdocs">mkdocs</a>主题([查看源代码])包含以下目录结构（部分）：</p>
+<pre><code class="language-nohighlight">- css\
+- fonts\
+- img\
+  - favicon.ico
+  - grid.png
+- js\
+- 404.html
+- base.html
+- content.html
+- nav-sub.html
+- nav.html
+- toc.html
+</code></pre>
+<p>要覆盖该主题中包含的任何文件，请在<code>docs_dir</code>旁边创建一个新目录：</p>
+<pre><code class="language-bash">mkdir custom_theme
+</code></pre>
+<p>然后将您的<code>mkdocs.yml</code>配置文件指向新目录：</p>
+<pre><code class="language-yaml">theme:
+    name: mkdocs
+    custom_dir: custom_theme/
+</code></pre>
+<p>要覆盖404错误页面（“找不到文件”），请将名为<code>404.html</code>的新模板文件添加到<code>custom_theme</code>目录中。 有关可以包含在模板中的内容的信息，请查看用于构建<a href="../custom-themes/">自定义主题</a>的文档。</p>
+<p>要覆盖favicon，您可以在<code>ustom_theme/img/favicon.ico</code>中添加一个新的图标文件。</p>
+<p>要包含JavaScript库，请将库复制到<code>custom_theme/js/</code>目录。</p>
+<p>您的目录结构现在应如下所示：</p>
+<pre><code class="language-nohighlight">- docs/
+  - index.html
+- custom_theme/
+  - img/
+    - favicon.ico
+  - js/
+    - somelib.js
+  - 404.html
+- config.yml
+</code></pre>
+<p>!!! Note</p>
+<pre><code>父主题中包含的（在`name`中定义）但不包括在`custom_dir`中的任何文件将继续使用。`custom_dir`只会覆盖/替换父主题中的文件。 如果要删除文件或从头开始构建主题，则应查看用于构建[自定义主题]的文档。
+</code></pre>
+<h4 id="_5">覆盖模板块</h4>
+<p>内置主题在模板块中实现了许多部分，可以在<code>main.html</code>模板中单独覆盖。 只需在<code>custom_dir</code>中创建一个<code>main.html</code>模板文件，并在该文件中定义替换块。 只要确保<code>main.html</code>扩展<code>base.html</code>。 例如，要更改MkDocs主题的标题，替换的<code>main.html</code>模板将包含以下内容：</p>
+<pre><code class="language-django">{% extends &quot;base.html&quot; %}
+
+{% block htmltitle %}
+&lt;title&gt;Custom title goes here&lt;/title&gt;
+{% endblock %}
+</code></pre>
+<p>在上面的例子中，将使用自定义<code>main.html</code>文件中定义的<code>htmltitle</code>块代替父主题中定义的默认<code>htmltitle</code>块。 您可以根据需要重新定义任意数量的块，只要这些块在父级中定义即可。 例如，您可以将Google Analytics脚本替换为不同服务的脚本，或者将搜索功能替换为您自己的搜索功能。 您需要查询正在使用的父主题，以确定可以覆盖的块。 MkDocs和ReadTheDocs主题提供以下块：</p>
+<ul>
+<li><code>site_meta</code>：包含文档头中的元标记。</li>
+<li><code>htmltitle</code>：包含文档头中的页面标题。</li>
+<li><code>styles</code>：包含样式表的链接标记。</li>
+<li><code>libs</code>：包含页眉中包含的JavaScript库（jQuery等）。</li>
+<li><code>scripts</code>：包含应在页面加载后执行的JavaScript脚本。</li>
+<li><code>analytics</code>：包含分析脚本。</li>
+<li><code>extrahead</code>：<code>&lt;head&gt;</code>中的空块，用于插入自定义标记/脚本/等。</li>
+<li><code>site_name</code>：包含导航栏中的站点名称。</li>
+<li><code>site_nav</code>：包含导航栏中的站点导航。</li>
+<li><code>search_box</code>：包含导航栏中的搜索框。</li>
+<li><code>next_prev</code>：包含导航栏中的下一个和上一个按钮。</li>
+<li><code>repo</code>：包含导航栏中的GitHub存储库链接。</li>
+<li><code>content</code>：包含页面的页面内容和目录。</li>
+<li><code>footer</code>：包含页脚。</li>
+</ul>
+<p>您可能需要查看源模板文件，以确保您的修改将适用于站点的结构。 有关可在自定义块中使用的变量列表，请参见[模板变量]。 有关块的更完整说明，请参阅[Jinja文档]。</p>
+<h4 id="custom_dir_1">组合custom_dir和模板块</h4>
+<p>将JavaScript库添加到<code>custom_dir</code>将使其可用，但不会将其包含在MkDocs生成的页面中。因此，需要从HTML添加链接到库。</p>
+<p>启动上面的目录结构（截断）：</p>
+<pre><code class="language-nohighlight">- docs/
+- custom_theme/
+  - js/
+    - somelib.js
+- config.yml
+</code></pre>
+<p>一个指向<code>custom_theme/js/somelib.js</code>文件的链接需要添加到模板中。 由于<code>somelib.js</code>是一个JavaScript库，它在逻辑上会进入<code>libs</code>块。 但是，仅包含新脚本的新<code>libs</code>块将替换父模板中定义的块，并且将删除父模板中库的任何链接。 为了避免破坏模板，可以使用<a href="http://jinja.pocoo.org/docs/dev/templates/#super-blocks">super block</a>从块中调用<code>super</code>：</p>
+<pre><code class="language-django">{% extends &quot;base.html&quot; %}
+
+{% block libs %}
+    {{ super() }}
+    &lt;script src=&quot;{{ base_url }}/js/somelib.js&quot;&gt;&lt;/script&gt;
+{% endblock %}
+</code></pre>
+<p>请注意，<a href="../custom-themes/#base_url">base_url</a>模板变量用于确保链接始终相对于当前页面。</p>
+<p>现在生成的页面将包含指向模板提供的库的链接以及<code>custom_dir</code>中包含的库。<code>custom_dir</code>中包含的任何其他CSS文件也是如此。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../writing-your-docs/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 编写文档" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              编写文档
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="下一页: 配置文件" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              配置文件
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://blog.yyang.in">Yang's Blog</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>
